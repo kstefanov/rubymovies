@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.10'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-#use Haml for templates
+gem 'sqlite3'
+#use Haml for templates 
 gem 'haml'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -47,12 +48,6 @@ group :development do
   gem 'spring'
 end
 
-# making your Gemfile safe for Heroku
-ruby ' 2.3.0' # just in case - tell Heroku which Ruby version we need
-group :development, :test do
- # make sure sqlite3 gem ONLY occurs inside development & test groups
- gem 'sqlite3' # use SQLite only in development and testing
-end
 group :production do
  # make sure the following gems are in your production group:
  gem 'pg' # use PostgreSQL in production (Heroku)
