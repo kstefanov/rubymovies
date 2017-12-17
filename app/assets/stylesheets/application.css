@@ -46,10 +46,12 @@ table#movies th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
+  
 }
 table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
+ background-color: yellow;
 }
 #notice, #warning {
   background: rosybrown;
